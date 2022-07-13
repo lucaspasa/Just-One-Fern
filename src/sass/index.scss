@@ -8,57 +8,89 @@ $fern-light-orange: #e7ac9a;
 body{
     // background gradient
     background: rgb(4,4,8);
-    background: linear-gradient(180deg, rgba(4,4,8,1) 0%, rgba(13,121,9,1) 18%, rgba(255,255,255,1) 100%);
-
+    background: linear-gradient(180deg, rgba(4,4,8,1) 10%, rgba(13,121,9,1) 29%, rgba(255,255,255,1) 73%);
+    margin: 0;
     header{
+        width: 100%;
+        margin: 0;
+        background-color: rgba(0, 0, 0, 0);
+        // border: 2px solid blue;
+        height: 11vh;
         .header{
             display: flex;
             align-items: center;
             justify-content: space-between;
-            min-height: 15vh;
+            height: 11vh;          
             max-height: 200px;
             max-width: 1400px;
-            border: red 2px solid;
+            // border: red 2px solid;
             margin: auto;
             .logo-title{
+                margin-top: 1em;
                 display: flex;
                 justify-content: center;
                 width: 40vw;
                 align-items: center;
-                border: 3px solid blue;
+                // border: 3px solid blue;
                 .logo{
                     margin-right: 1em;
                     //logo size
-                    $size: 10em;
+                    $size: 5em;
                     position: relative;
                     width: $size;
                     height: $size;
                     border-radius: 50%;
                     border: $fern-orange 2px solid;
                 }
+                a{
+                    text-decoration: none;
+                    // border: 2px dotted red;
+                }
+                .logo-hover{
+                    transition: .5s;
+                    border-radius: 50%;
+
+                }
+                .logo-hover:hover{
+                    transform: scale(1.07);
+                }
                 h1{
                     padding: 0;
-                    width: 50%;
+                    width: 100%;
                     font-size: 2.5em;
-                    font-weight: 600;
+                    font-weight: 500;
                     color: $fern-light-orange;
                     font-family: $font-hand;
                     text-align: center;
-                    border: $fern-orange 2px solid;
+                    // border: $fern-orange 2px solid;
 
+                }
+                .title-hover{
+                    width: 50%;
                 }
             }// X LOGO-TITLE X
             nav{
-                width: 50vw;
+                width: 40vw;
                 ul{
                     padding: 0;
                     width: 100%;
                     display: flex;
                     justify-content: space-evenly;
-                    border: 3px dashed gold;
+                    // border: 3px dashed gold;
                     li{
                         list-style-type: none;
-                        color: white;
+                        font-size: 1.5em;
+                        font-family: $font-hand;
+                        font-weight: 200;
+                        a{
+                            text-decoration: none;
+                            color: white;
+                            transition: .2s;
+                        }
+                        A:hover{
+                            color: $fern-orange;
+
+                        }
                     }
                 }
             }
