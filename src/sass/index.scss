@@ -5,14 +5,17 @@ $fern-orange: #e88d71;
 $fern-light-orange: #e7ac9a;
 
 
+
 body{
     // background gradient
     background: rgb(4,4,8);
     background: linear-gradient(180deg, rgba(4,4,8,1) 10%, rgba(13,121,9,1) 29%, rgba(255,255,255,1) 73%);
     margin: 0;
+    padding: 0;
     header{
         width: 100%;
         margin: 0;
+        margin-top: 1em;
         background-color: rgba(0, 0, 0, 0);
         // border: 2px solid blue;
         height: 11vh;
@@ -58,7 +61,7 @@ body{
                     padding: 0;
                     width: 100%;
                     font-size: 2.5em;
-                    font-weight: 500;
+                    font-weight: 400;
                     color: $fern-light-orange;
                     font-family: $font-hand;
                     text-align: center;
@@ -96,4 +99,85 @@ body{
             }
         } // X .HEADER X
     } // X HEADER X
+
+    // MAIN CONTENT
+    main{
+        min-height: 80vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        .container{
+            max-width: 1300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .landing-page{
+                margin-top: 3em;
+                // border: 2px solid blue;
+                padding: 0;
+                height: 70vh;
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-evenly;
+                font-family: $font-hand;
+                color: white;
+                .landing-text{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    // border: 2px solid red;
+                    text-align: center;
+                    h1{
+                        font-size: 5em;
+                        text-shadow: 2px 2px 4px #000000;
+                    }
+                    h2{
+                        font-size: 1.3em;
+                        text-shadow: 1px 1px 4px #000000;
+        
+                    }
+                }// X LANDING TEXT X
+                .standing{
+                        height: 70vh;
+                        max-width: 30vw;
+                        // border: 2px solid brown;
+                        display: flex;
+                        justify-content: center;
+                        padding: 0;
+                        img{
+                            $height: 45vw;
+                            height: $height;
+                            width: 22.5vw;
+                            max-width: 300px;
+                            max-height: 600px;
+                            // border: 2px solid brown;
+                        }
+                            .a-stand{
+                                transform: scale(.9);
+                                transform: scalex(.95)
+                                scaleY(.95);
+                            }
+                        
+                }
+                
+            }// X LANDING PAGE X
+        }
+       
+    } // X MAIN X
+    footer{
+        background-color: $fern-orange;
+        margin-bottom: 0;
+        ul{
+            display: flex;
+            justify-content: space-evenly;
+            li{
+                list-style-type: none;
+                a{
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+        };
+    } // X FOOTER X
 } // X BODY X
