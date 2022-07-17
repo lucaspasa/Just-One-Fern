@@ -6,6 +6,7 @@ $fern-light-orange: #e7ac9a;
 $fern-green: #25c48a;
 $fern-green-2: #01ae66;
 $gradient-green: rgba(13,121,9,1);
+$golden-green: rgb(177, 231, 177);
 
 html{
     scroll-behavior: smooth;
@@ -99,7 +100,7 @@ body{
                             transition: .2s;
                         }
                         A:hover{
-                            color: $fern-orange;
+                            color: $golden-green;
 
                         }
                     }
@@ -189,6 +190,7 @@ body{
                 display: flex;
                 justify-content: space-evenly;
                 margin-bottom: 3em;
+               
                 a{
                     text-decoration: none;
                     color: rgb(0, 0, 0);
@@ -196,10 +198,11 @@ body{
                     transition: .2s;
                 }
                 a:hover{
-                    color: rgba(0, 78, 17, 0.801);
+                    color: $fern-orange;
                 }
             }// X LINKS X
             .watch{
+                border-top: 1px solid $fern-orange;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -222,6 +225,10 @@ body{
                 h1{
                     font-weight: 800;
                     margin-bottom: -.3em;
+                    color: $golden-green;
+                    -webkit-text-stroke: 1px black;
+                    font-size: 3em;
+                    text-decoration: underline black;
                 }
                 article:nth-child(2){
                     // background-color: $fern-orange;
@@ -253,11 +260,16 @@ body{
                                 margin: 0 1em;
                                 transform: scale(1.5);
                                 transition: .2s;
+                                font-weight: 500;
+                            }
+                            .fa-instagram{
+                                font-weight: 600;
                             }
                             a:hover{
-                                color: rgba(0, 0, 0, 0.445);
+                                color: $gradient-green;
                             }
                             h2{
+                                
                                 margin: 0;
                                 margin-right: .5em;
                                 // border: red 2px solid;
@@ -312,6 +324,7 @@ body{
                 align-items: center;
                 justify-content: center;
                 padding: 2em 0 3em 0;
+                border-bottom: white 1px solid;
             .container{
                 display: flex;
                 flex-direction: column;
@@ -322,6 +335,9 @@ body{
                     padding: 0 5em;
                     font-size: 1.5em;
                     font-weight: 200;
+                    span{
+                        font-weight: 400;
+                    }
                 }
                 h1, h2{
                     padding: 0 5em 0 2.5em;
@@ -331,7 +347,8 @@ body{
         }//X CONTACT X
     } // X MAIN X
     footer{
-        background-color: $gradient-green;
+        // background-color: $gradient-green;
+        background-color: black;
         margin: 0;
         margin-top: 0em;
         margin-bottom: 0;
@@ -344,9 +361,13 @@ body{
                 list-style-type: none;
                 a{
                     text-decoration: none;
-                    color: black;
+                    color: rgb(177, 231, 177);
                     font-weight: 500;
-                    font-size: 1.2em
+                    font-size: 1.2em;
+                    transition: .2s;
+                }
+                a:hover{
+                    color: #e7ac9a
                 }
             }
         };
