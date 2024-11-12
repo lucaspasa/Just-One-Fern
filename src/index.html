@@ -36,6 +36,7 @@
         <div class="container">
     
             <section class="landing-page">
+                <a href="https://www.youtube.com/@JustOneFern_?sub_confirmation=1" class="Subscribe" target='_blank'>Subscribe</a>
                 <article class="landing-text">
                     <h1>JUST ONE <br> <span class="fern">FERN</span></h1>  
                     <img src="assets/logo-nb.png" alt="">
@@ -52,13 +53,15 @@
                     <a href="https://twitter.com/Just_One_Fern" class="fa fa-twitter" target='_blank'></a>
                     <a href="https://www.tiktok.com/@justonefern" class="fa" target='_blank'><i class="fa-brands fa-tiktok"></i></a>
                 </section>    
+                
+
+            </section>
+            <section id="about" class="about">
+                <div class="section-title" id="watch">Watch our latest episode</div>
                 <div class="youtube" id="listen">
                     <iframe width="468" height="265.2" src="https://www.youtube.com/embed/+lastest?list=PLXizmcyCnY-1qqAKi1XqXO5TGv4Mi-YcH" frameborder="0" allowfullscreen></iframe>
 
                 </div>
-
-            </section>
-            <section id="about" class="about">
                 <h1 class="section-title">OUR HOSTS</h1>
                 <article class="aaron">
                     <img class="a-bio" src="assets/a-bio.png" alt="">
@@ -131,10 +134,6 @@
                 </p>
                 <h2>Do you wanna be our next guest?</h2>
                 <p>Send us your availability for the week and your socials. We will try to schedule you in. Thursdays work best for us, but we're flexible.</p>
-                <h2>Is it weird?</h2>
-                <p>Is it weird if I...? the age old question is answered by experts in the field. Text or leave a voicemail at <span>1-315-278-1153</span> and we
-                    will feature your question on our show. We may be harsh, but we are fair.
-                </p>
             </div>
 
         </section>
@@ -147,13 +146,5 @@
         </ul>
     </footer>
 </body>
-<script>
-   var channelID = "UCaLMuvktHnpMLHYJcV4g0lw";
-var reqURL = "https://www.youtube.com/feeds/videos.xml?channel_id=";
-$.getJSON("https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(reqURL)+channelID, function(data) {
-   var link = data.items[0].link;
-   var id = link.substr(link.indexOf("=")+1);
-$("#youtube_video").attr("src","https://youtube.com/embed/"+id + "?controls=0&showinfo=0&rel=0");
-});
-</script>
+<!--  -->
 </html>
