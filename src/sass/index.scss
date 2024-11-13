@@ -13,6 +13,8 @@ html{
     
 }
 
+
+
 .Subscribe {
     text-decoration: none;
     color: white;
@@ -375,9 +377,21 @@ html{
                         }
                         .a-bio{
                             transform: scale(.6);
-                                            }
-                    }
+                            padding: -5em;
+                        }
+                        .l-bio{
+                            width: 50vw;
+                            transform: scale(1);
+                            padding: -5em -5em;
+                            margin-right: -10em;
+                            z-index: -1;
+
+                         }
+                        
+                        
                 }
+                              
+            }
             }// X CONTAINER X 
             .contact{
                 background-color: black;
@@ -827,8 +841,11 @@ html{
                             margin-bottom: 2em;
                          }
                          .l-bio{
-                            transform: scale(1.5);
-                            padding: 5em 0;
+                            width: 50vw;
+                            transform: scale(3);
+                            padding: 5em 0em;
+                            margin-bottom: 1em;
+                            z-index: -1;
 
                          }
                     }
@@ -914,6 +931,7 @@ html{
          padding: 0;
          font-family: $font-hand;
          overflow-x: hidden;
+         overflow-y: hidden;
          max-width: 99vw;
          .logo-hover{
              position: sticky;
@@ -1267,15 +1285,17 @@ html{
                           }
                           .l-bio{
                               width: 50vw;
-                             transform: scale(2);
+                             transform: scale(3);
                              padding: 5em 0em;
                              margin-bottom: 1em;
+                             z-index: -1;
                     //  border: #e7ac9a 3px solid;
 
  
                           }
                      }
                  }
+                 z-index: -1;
              }// X CONTAINER X 
              .contact{
                  z-index: 3;
