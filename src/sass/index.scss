@@ -925,19 +925,33 @@ html{
 
 //MOBILE STYLES
 @media only screen and (max-width: 500px){
+    html{
+        max-width: 100vw;
+        // overflow-x: hidden;
+        // overflow-x: clip !important;
+        margin: 0;
+         padding: 0;
+        //  max-width: 100vw !important;
+
+    }
+
+    img {
+        display: block;
+    }
     body{
-         // background gradient
+        // max-width: 100vw !important;
+        // background gradient
          background: rgb(4,4,8);
          background: linear-gradient(180deg, rgba(13,121,9,1) 50vh, rgba(255,255,255,1) 150vh);
          margin: 0;
          padding: 0;
          font-family: $font-hand;
          overflow-x: hidden;
-         max-width: 99vw;
+         //  max-width: 99vw;
          .logo-hover{
              position: sticky;
              text-decoration: none;
-             // border: 2px dotted red;
+            //  border: 2px dotted red;
              transition: .5s;
              border-radius: 50%;
              z-index: 10;
@@ -950,9 +964,11 @@ html{
                  height: $size;
                  border-radius: 50%;
                  border: $fern-orange 2px solid;
-                 top: 3em;
-                 left: 90%;
+                 top: 4em;
+                 left: 82%;
+                //  left: 1em;
                  transition: .3s;
+                 
              }
          }
          
@@ -969,6 +985,8 @@ html{
              background-color: rgba(0, 0, 0, 0);
              // border: 2px solid blue;
              height: 11vh;
+            //  overflow-x: hidden;
+            //  overflow-y: visible;
              // display: flex;
              .header{
                  display: flex;
@@ -977,7 +995,7 @@ html{
                  justify-content: space-between;
                  height: 15vh;          
                  max-height: 200px;
-                 max-width: 900px;
+                 max-width: 500px;
                  // border: red 2px solid;
                  margin: auto;
                  margin-top: 0;
@@ -1036,15 +1054,18 @@ html{
              display: flex;
              flex-direction: column;
              align-items: center;
+             overflow-x: hidden;
+
              // border: 2px solid blue;
              // z-index: -8;
              .container{
-                 max-width: 500px;
                  display: flex;
                  flex-direction: column;
                  align-items: center;
                 //  overflow-x: hidden;
+                overflow-y: hidden;
                  .landing-page{
+                    // max-width: 100vw;
                      z-index: 0;
                      margin-top: 0em;
                      margin-bottom: 10em;
@@ -1067,16 +1088,7 @@ html{
                          // border: 2px solid red;
                          margin-bottom: -1em;
                          z-index: 0;
-                         // border: 2px solid yellow;
- 
-                         img{
-                             // border: 2px solid black;
-                             width: 15rem;
-                             width: clamp(15rem, 13.6rem + 7.000000000000001vw, 22rem);
-                             order: 3;
-                             //  border: 2px solid red;
- 
-                         }
+                        
                          h1{
                              margin: .5em 0;
                              margin-top: 1em;
@@ -1092,14 +1104,12 @@ html{
                              //  border: 2px solid red;
                          }
                          .side{
-                             margin-left: -6em;
                              order: 2;
                              width: 85%;
                              line-height: 2em;
                              display: flex;
                              flex-direction: column;
                              align-items: center;
-                             transform: translateX(3em);
                              text-align: center;
                              //  border: 2px solid red;
  
@@ -1148,10 +1158,8 @@ html{
                          a{
                              text-decoration: none;
                              color: rgb(0, 0, 0);
-                             transform: scale(2.5);
                              transition: .2s;
                              z-index: 15;
-                             padding: 1em;
                          }
                          a:hover{
                              color: $fern-orange;
@@ -1170,7 +1178,8 @@ html{
                  }              
                  .about{
                 //    overflow-y: hidden;
-                    //  max-width: 100%;
+                     max-width: 100%;
+                    overflow: hidden;
                      margin: 0;
                      display: flex;
                      flex-direction: column;
@@ -1214,8 +1223,6 @@ html{
                                  a{
                                      text-decoration: none;
                                      color: black;
-                                     margin: 0 1em;
-                                     transform: scale(1.5);
                                      transition: .2s;
                                      font-weight: 500;
                                      
@@ -1229,7 +1236,6 @@ html{
                                  h2{
                                      
                                      margin: 0;
-                                     margin-right: .5em;
                                      // border: red 2px solid;
                                      font-size: 2.5em;
                                      align-self: flex-end;
@@ -1245,6 +1251,8 @@ html{
                              font-weight: 300;
                          }
                          ul{
+                             align-self: flex-start;
+                             justify-self: flex-start;
                              display: flex;
                              align-items: flex-start;
                              justify-content: center;
@@ -1258,19 +1266,11 @@ html{
                                  list-style-type: none;
                                  font-size: .9em;
                                  margin-top: 1em;
-                                 margin-right: .3em;
      
                              }
                              li:nth-child(1){
                                  font-weight: 700;
                              }
-                         }
-                         img{
-                            //  width:50%;
-                             border-radius: 30%;
-                             transform: scale(1.1);
-                             // border: 6px solid black;
-     
                          }
                          .about-aaron{
                              order: 1;
@@ -1280,19 +1280,16 @@ html{
                              padding: 5em 0;
                              order: 2;
                              transform: scale(2);
-                             margin-bottom: 3em;
-                    //  border: #e7ac9a 3px solid;
+                             margin-bottom: 5em;
+                            //  border: #e7ac9a 3px solid;
 
                           }
-                          .l-bio{
-                            //   width: 50vw;
-                             transform: scale(3);
-                             padding: 5em 0em;
-                             margin-bottom: 1em;
+                        .l-bio{
+                             margin: none;
+                             margin-bottom: -1em;
                              z-index: -1;
-                    //  border: #e7ac9a 3px solid;
-
- 
+                            //  border: #e7ac9a 3px solid;
+                            width: 100px;
                           }
                      }
                  }
@@ -1303,12 +1300,12 @@ html{
                  background-color: black;
                  color: white;
                 //  border: 2px solid blue;
-                 width: 101vw;
+                 width: 100vw;
                  display: flex;
                      flex-direction: column;
                      align-items: center;
                      justify-content: center;
-                     padding: 2em 0 3em 0;
+                    //  padding: 2em 0 3em 0;
                      border-bottom: white 1px solid;
                      
                  .container{
@@ -1316,7 +1313,7 @@ html{
                      flex-direction: column;
                      align-items: flex-start;
                      justify-content: center;
-                     max-width: 1200px;
+                     max-width: 100vw;
 
                      p{
                          padding: 0 1.5em;
@@ -1340,7 +1337,7 @@ html{
              margin-top: 0em;
              margin-bottom: 0;
              border: 2px solid black;
-             width: 100vw;
+             width: 99vw;
      
              ul{
                  padding: 0;
