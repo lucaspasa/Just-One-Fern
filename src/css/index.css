@@ -512,7 +512,7 @@ html {
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
     margin-top: 2em;
-    margin-bottom: -1em;
+    margin-bottom: 1em;
   }
   body {
     background: rgb(4, 4, 8);
@@ -577,13 +577,14 @@ html {
     margin: auto;
     margin-top: 0;
   }
-  body header .header .line-1 a {
+  body header .header .line-1 .title-hover {
+    color: white;
     text-decoration: none;
-    color: rgb(13, 121, 9);
+    color: white;
     font-size: 3em;
     font-weight: 600;
     -webkit-text-stroke: 1px rgb(255, 249, 249);
-    margin-left: -0.2em;
+    margin-left: 0.1em;
   }
   body header .header .line-2 {
     display: -webkit-box;
@@ -698,22 +699,6 @@ html {
         -ms-flex-order: 3;
             order: 3;
   }
-  body main .container .landing-page .landing-text h1 {
-    margin: 0.5em 0;
-    margin-top: 1em;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-    font-size: 4rem;
-    font-size: clamp(4rem, 3.7rem + 1.5vw, 5.5rem);
-    text-shadow: 2px 2px 4px #000000;
-    line-height: 1.3em;
-    font-weight: 900;
-    text-align: center;
-    width: 80%;
-    -webkit-transform: scaley(1.2);
-            transform: scaley(1.2);
-  }
   body main .container .landing-page .landing-text .side {
     margin-left: -6em;
     -webkit-box-ordinal-group: 3;
@@ -744,6 +729,10 @@ html {
     font-size: 1.3em;
     font-weight: 400;
     color: black;
+  }
+  body main .container .landing-page .landing-text #two-title {
+    visibility: hidden;
+    position: absolute;
   }
   body main .container .landing-page .youtube {
     margin-top: 1em;
@@ -1295,6 +1284,11 @@ html {
     font-size: 2.3em;
     text-shadow: 1px 1px 2px rgba(0, 61, 28, 0.6509803922);
   }
+  body main .container #line {
+    width: 100vw;
+    border-bottom: 1px solid black;
+    margin-bottom: 1em;
+  }
   body main .container .about {
     max-width: 100%;
     overflow: hidden;
@@ -1317,6 +1311,7 @@ html {
     -webkit-text-stroke: 1px black;
     font-size: 3.5em;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.493);
+    z-index: 2;
   }
   body main .container .about article:nth-child(2) {
     border-radius: 25px 25px 0px 0px;
@@ -1339,6 +1334,13 @@ html {
         -ms-flex-align: center;
             align-items: center;
     max-width: 60vw;
+  }
+  body main .container .about article .aaron {
+    z-index: -2;
+    overflow-y: hidden;
+  }
+  body main .container .about article .lucas {
+    z-index: 2;
   }
   body main .container .about article .abouts {
     padding: none;
@@ -1406,15 +1408,18 @@ html {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+    z-index: -2;
   }
   body main .container .about article .a-bio {
+    z-index: -1;
     padding: 5em 0;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
     -webkit-transform: scale(2);
             transform: scale(2);
-    margin-bottom: 5em;
+    margin-bottom: 10em;
+    max-height: 600px;
   }
   body main .container .about article .l-bio {
     margin: none;
