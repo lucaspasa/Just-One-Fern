@@ -39,7 +39,7 @@
         <div class="container">
 
             <section class="landing-page">
-                <a href="https://www.youtube.com/@JustOneFern_?sub_confirmation=1" class="Subscribe"
+                <a onclick="addSubCount()" href="https://www.youtube.com/@JustOneFern_?sub_confirmation=1" class="Subscribe"
                     target='_blank'>Subscribe</a>
                 <article class="landing-text">
                     <h1 id="two-title">JUST ONE <br> <span class="fern">FERN</span></h1>
@@ -47,7 +47,6 @@
                     <div class="side">
                         <h2>A Brooklyn based comedy podcast by two guys who are frequently told that podcast equipment
                             should be more expensive</h2>
-                        <!-- <p>Two guys who frequently get told that podcast equipment should be more expensive. Aaron Fern and Lucas Rinaldi talk about their lives and the world.</p> -->
                     </div>
                 </article>
                 <h3>"A couple of guys talking about a whole lot of nothing"</h3>
@@ -65,14 +64,15 @@
 
             </section>
             <section id="about" class="about">
-                <div class="section-title" id="watch">Watch our latest episode</div>
+                <div class="section-title" id="watch">Watch our latest episode on YouTube</div>
                 <div class="youtube" id="listen">
                     <iframe 
                         src="https://www.youtube.com/embed/+lastest?list=PLXizmcyCnY-1qqAKi1XqXO5TGv4Mi-YcH"
                         frameborder="0" allowfullscreen></iframe>
 
                 </div>
-                <!-- <div id="line"></div> -->
+                <h2 class="subscriberCount"><div id="subCount"></div>  Subscribers</h2>
+
                 <h1 class="section-title">OUR HOSTS</h1>
                 <div id="line"></div>
                 <article class="aaron">
@@ -80,17 +80,10 @@
                     <div class="abouts about-aaron">
                         <div class="name">
                             <h2>Aaron Fern</h2>
-                            <!-- <a href="https://www.instagram.com/aaronfern_/" class="fa fa-instagram" target='_blank'></a>
-                             <a href="https://open.spotify.com/artist/0TwxThijoGNC6DxkNcKyYH" class="fa fa-spotify" target='_blank'></a> -->
                             <a href="https://youtu.be/A80PHNsc1lI?si=k_Bwz-QvZvBvgJC6&t=28" class="fa fa-youtube"
                                 target='_blank'></a>
-                            <!-- <a href="https://twitter.com/aaronfern_" class="fa fa-twitter" target='_blank'></a>
-                             <a href="https://www.tiktok.com/@justonefern" class="fa" target='_blank'><i class="fa-brands fa-tiktok"></i></a> -->
-                        </div>
+                            </div>
                         <P>
-                            <!-- Aaron Fern is a musician and god killer from Nashville, Tenessee and is a devout Syracuse basketball fan. He spends his days working for Warner Music Group
-                             and his nights bartending at everyones favorite brewery "The Dirty Ferny". One day Aaron hopes to serve chicken noodle soup to an ill Justin Timberlake.
-                             Justin, if you're out there, please let Aaron 'Misery' you. -->
                             Aaron Fern is a multi-culteral vagabond with a knack for 'hanging loose'. Although he is
                             known primarily as the voice actor
                             for the animated TV character Brian Griffen from the hit show Family Guy, he often is found
@@ -166,6 +159,51 @@
             <li><a target="_blank" href="https://forms.gle/suy314dAegtyp3Re6">Contact Us</a></li>
         </ul>
     </footer>
+    <Script>
+        let subCount;
+
+            function addSubCount() {
+                subCount++;
+                setSubCount();
+            }
+
+            function setSubCount() {
+                    var s = document.getElementById('subCount');
+                    s.innerHTML = subCount;
+                }
+
+            window.onload = (event) => {
+                getChannelData();
+            }
+
+            async function getChannelData() {
+                const apiKey = 'AIzaSyD5GBY5209MT2PZc2ZsFQMKBhEKlcQuQqU';
+                const channelId = 'UCaLMuvktHnpMLHYJcV4g0lw'
+                const url = `https://www.googleapis.com/youtube/v3/channels?part=snippet,contentDetails,statistics&id=${channelId}&key=${apiKey}`;
+                
+                
+
+                
+
+                try {
+                    const response = await fetch(url);
+
+                    if (!response.ok) {
+                    const message = `Error: ${response.status}`;
+                    throw new Error(message);
+                    }
+
+                    const data = await response.json();
+                    console.log(data.items[0].statistics.subscriberCount);
+                    subCount = data.items[0].statistics.subscriberCount
+                    setSubCount();
+                    return data;
+                } catch (error) {
+                    console.error("There was a problem with the fetch operation:", error);
+                }
+            }
+
+    </Script>
 </body>
 <!--  -->
 

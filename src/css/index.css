@@ -3,6 +3,24 @@ html {
   scroll-behavior: smooth;
 }
 
+.subscriberCount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  width: 9em;
+  height: 2em;
+  border: 1px solid gray;
+  background-color: #e88d71;
+  border-radius: 25px;
+}
+
 .Subscribe {
   text-decoration: none;
   color: white;

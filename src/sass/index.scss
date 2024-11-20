@@ -13,7 +13,18 @@ html{
     
 }
 
+.subscriberCount {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    width: 9em;
+    height: 2em;
+    border: 1px solid gray;
+    background-color: $fern-orange;
+    border-radius: 25px;
 
+ }
 
 .Subscribe {
     text-decoration: none;
@@ -1129,6 +1140,7 @@ html{
                          border: #e7ac9a 10px solid;
                          }
                      }
+                     
                      h3{
                          font-style: italic;
                          // border: #e7ac9a 10px solid;
@@ -1181,7 +1193,7 @@ html{
                      flex-direction: column;
                      align-items: center;
                      z-index: inherit;
-                    
+                     
                      h1{
                          font-weight: 800;
                          color: $golden-green;
