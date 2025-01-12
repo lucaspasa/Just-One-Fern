@@ -13,6 +13,28 @@ html{
     
 }
 
+.curated-shop {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1rem;
+
+    img {
+        width: 300px;
+        border-radius: 15px;
+    }
+    .shop-item {
+        p{
+            margin: 0;
+        }
+        h2{
+            margin-bottom: 0;
+        }
+        a{
+            color: black;
+        }
+    }
+}
+
 .subscriberCount {
     display: flex;
     justify-content: space-evenly;
@@ -21,7 +43,8 @@ html{
     width: 9em;
     height: 2em;
     border: 1px solid gray;
-    background-color: $fern-orange;
+    // background-color: $fern-orange;
+    background-color: red;
     border-radius: 25px;
 
  }
@@ -69,6 +92,16 @@ html{
 
 
 @media only screen and (min-width: 800px){
+    
+    .curated-shop {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 1rem;
+
+        img {
+            width: 300px;
+        }
+    }
     body{
         // background gradient
         background: rgb(4,4,8);
@@ -133,11 +166,13 @@ html{
                         color: $gradient-green;
                         font-size: 3em;
                         font-weight: 600;
-                        -webkit-text-stroke: 1px rgb(255, 249, 249);
+                        -webkit-text-stroke: 2px rgb(255, 249, 249);
                         margin-left: -.2em;
+                        paint-order: stroke fill;
                         // border: 2px solid blue;
                         // height: 5vh;
                     }
+                    
                 }
                 .line-2{
                     display: flex;
@@ -229,9 +264,9 @@ html{
                             text-align: end;
                             width: 40%;
                             transform: scaley(1.2);
-    
-                            
+                            paint-order: stroke fill;
                         }
+            
                         .side{
                             width: 45%;
                             line-height: 2em;
@@ -265,7 +300,9 @@ html{
                         font-family: $font-hand;
                         font-size: 2.3em;
                         text-shadow: 1px 1px 2px #003d1ca6;
+                        paint-order: stroke fill;
                     }
+        
                 }
                 .links{
                     width: 100%;
@@ -295,19 +332,24 @@ html{
                     #watch {
                         font-weight: 800;
                         color: $golden-green;
-                        -webkit-text-stroke: 1px black;
+                        -webkit-text-stroke: 2px black;
                         font-size: 3.5em;
                         text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.493);
+                        paint-order: stroke fill;
                     }
+                    
                     h1{
                         margin-bottom: -.3em;
                         font-weight: 800;
                         color: $golden-green;
-                        -webkit-text-stroke: 1px black;
+                        -webkit-text-stroke: 2px black;
                         font-size: 3.5em;
                         text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.493);
                         // text-decoration: underline black;
+                        paint-order: stroke fill;
                     }
+                
+
                     article:nth-child(2){
                         // background-color: $fern-orange;
                         border-radius: 25px 25px 0px 0px;
@@ -479,6 +521,16 @@ html{
 //RESPONSIVE STYLES
 
 @media only screen and (max-width: 800px){
+
+    .curated-shop {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 1rem;
+
+        img {
+            width: 300px;
+        }
+    }
     .Subscribe {
     text-decoration: none;
     color: white;
@@ -559,8 +611,9 @@ html{
                         font-weight: 600;
                         -webkit-text-stroke: 1px rgb(255, 249, 249); 
                         margin-left: .1em;
-                    
+                        paint-order: stroke fill;
                     }
+                    
                 }
                 .line-2{
                     display: flex;
@@ -723,6 +776,7 @@ html{
                         font-size: 2.3em;
                         text-shadow: 1px 1px 2px #003d1ca6;
                     }
+                    
                 }      
                  #watch {
                     font-family: $font-hand;
@@ -750,7 +804,9 @@ html{
                         font-size: 3.5em;
                         text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.493);
                         // text-decoration: underline black;
+                        paint-order: stroke fill;
                     }
+                    
                     article:nth-child(2){
                         // background-color: $fern-orange;
                         border-radius: 25px 25px 0px 0px;
@@ -935,6 +991,16 @@ html{
 
     }
 
+    .curated-shop {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 1rem;
+
+        img {
+            width: 300px;
+        }
+     }
+
     img {
         display: block;
     }
@@ -1044,7 +1110,11 @@ html{
                  } // X LINE 2 X
              } // X .HEADER X
          } // X HEADER X
-     
+         .curated-shop {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 1rem;
+         }
          // MAIN CONTENT
          main{
              margin: 0;
@@ -1058,6 +1128,7 @@ html{
 
              // border: 2px solid blue;
              // z-index: -8;
+             
              .container{
                  display: flex;
                  flex-direction: column;
@@ -1103,6 +1174,7 @@ html{
                              transform: scaley(1.2);
                              //  border: 2px solid red;
                          }
+                         
                          .side{
                              order: 2;
                              width: 85%;
@@ -1176,6 +1248,7 @@ html{
                          font-size: 2.3em;
                          text-shadow: 1px 1px 2px #003d1ca6;
                      }
+                     
                  }         
                  #line{
                     width: 100vw;
@@ -1201,7 +1274,9 @@ html{
                          font-size: 3.5em;
                          text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.493);
                          z-index: 2;
+                         paint-order: stroke fill;
                      }
+                     
                      article:nth-child(2){
                          border-radius: 25px 25px 0px 0px;
                      }

@@ -28,6 +28,7 @@
                         <li><a href="#listen">Listen</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#contact">Contact</a></li>
+                        <li><a href="shop.html">Shop</a></li>
 
                     </ul>
                 </nav>
@@ -84,7 +85,7 @@
                                 target='_blank'></a>
                             </div>
                         <P>
-                            Aaron Fern is a multi-culteral vagabond with a knack for 'hanging loose'. Although he is
+                            Aaron Fern is a multi-cultural vagabond with a knack for 'hanging loose'. Although he is
                             known primarily as the voice actor
                             for the animated TV character Brian Griffen from the hit show Family Guy, he often is found
                             watching birds and aiming his BB Gun at them
@@ -169,7 +170,7 @@
 
             function setSubCount() {
                     var s = document.getElementById('subCount');
-                    s.innerHTML = subCount;
+                    s.innerHTML = subCount/1000 + "K";
                 }
 
             window.onload = (event) => {
