@@ -1301,7 +1301,8 @@ html {
     overflow-y: hidden;
   }
   body main .container .landing-page {
-    z-index: 0;
+    position: relative;
+    z-index: -10;
     margin-top: 0em;
     margin-bottom: 10em;
     padding: 0;
@@ -1339,7 +1340,7 @@ html {
         -ms-flex-pack: start;
             justify-content: flex-start;
     margin-bottom: -1em;
-    z-index: 0;
+    z-index: -10;
   }
   body main .container .landing-page .landing-text h1 {
     margin: 0.5em 0;
