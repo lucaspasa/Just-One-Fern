@@ -13,27 +13,109 @@ html{
     
 }
 
-.curated-shop {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 1rem;
-
-    img {
+@media only screen and (max-width: 678px){
+    .curated-shop {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 1rem;
         width: 300px;
-        border-radius: 15px;
-    }
-    .shop-item {
-        p{
-            margin: 0;
+        margin: 0 auto;
+    
+        img {
+            width: 300px;
+            border-radius: 15px;
         }
-        h2{
-            margin-bottom: 0;
-        }
-        a{
-            color: black;
+        .shop-item {
+            margin-bottom: 2em;
+            p{
+                margin: 0;
+            }
+            h2{
+                margin-bottom: 0;
+            }
+            a{
+                color: black;
+            }
         }
     }
 }
+
+@media only screen and (min-width: 678px){
+    .curated-shop {
+            min-width: 600px;
+            width: 90vw;
+            max-width: 1500px;
+        img {
+            width: 300px;
+            border-radius: 15px;
+        }
+        .shop-item {
+            margin-bottom: 2em;
+            p{
+                margin: 0;
+            }
+            h2{
+                margin-bottom: 0;
+            }
+            a{
+                color: black;
+            }
+        }
+    }
+}
+
+
+
+
+.shop-page{
+    
+
+    .shop-all{
+        text-decoration: none;
+        color: $gradient-green;
+        font-size: 3em;
+        font-weight: 600;
+        -webkit-text-stroke: 2px rgb(255, 249, 249);
+        margin-left: -.2em;
+        paint-order: stroke fill;
+    }
+
+    .redbubble{
+        background-color: $fern-orange;
+        border-radius: 20px;
+        height: 20px;
+        width: 120px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a{
+            text-decoration: none;
+            font-size: 1.3em;
+            font-weight: 500;
+        }
+    }
+
+    a{
+        color: black;
+    }
+
+    p{
+        margin-bottom: 2em;
+    }
+
+    img{
+        border-radius: 15px;
+    }
+
+    .text-box{
+        margin-bottom: 3em;
+        padding: 2em;
+    }
+}
+
+
+
 
 .subscriberCount {
     display: flex;
